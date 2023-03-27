@@ -2,7 +2,7 @@
 module.exports = {
     HOST: '127.0.0.1',
     USER: 'root',
-    PASSWORD:1234,
+    PASSWORD:'1234',
     DB:'ecommerce_db',
     DIALECT: 'mysql'
 }

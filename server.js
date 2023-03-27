@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 //Server Listening
 app.get('/',(req,res)=>{
     res.send('Home');
-})
+});
 app.listen(serverConfig.PORT,()=>{
-    console.log('server running on port :'   + serverConfig.PORT );
-})
+    console.log(`server running on port: ${serverConfig.PORT}`);
+});
