@@ -95,3 +95,16 @@ else{
 }
 
 }
+//deleting an existing category based on category id
+//route: /category/id
+
+exports.delete = (req,res)=>{
+    const requestedId = req.params.id;
+    console.log(requestedId);
+    Category.destroy({where:{id:requestedId}})
+    .then((deletedCategory)=>{
+        res.status(201).send('successfuly deleted')
+    }).catch((err)=>{
+        res.status(500).send({message:'internal server error' + err})
+    })
+}

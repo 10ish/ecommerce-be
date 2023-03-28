@@ -4,7 +4,7 @@ module.exports = (sequelize,Sequelize)=>{
 
     const Category = sequelize.define('category',{
         id: {
-            type: Sequelize.STRING,
+            type: Sequelize.INTEGER,
             primaryKey:true,
             autoIncrement:true
         },
@@ -16,9 +16,9 @@ module.exports = (sequelize,Sequelize)=>{
             type: Sequelize.STRING
         }
     
+    },{
+        tableName:'Categories'
     });
     return Category;
 }
 
-
-module.exports = Category;
