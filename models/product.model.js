@@ -7,9 +7,9 @@ const { sequelize, Sequelize } = require(".");
 module.exports = (sequelize,Sequelize)=>{
     const Product = sequelize.define('products',{
         id:{
-            type:Sequelize.Integer,
+            type:Sequelize.INTEGER,
             autoIncrement:true,
-            primarykey: true
+            primaryKey: true
         },
         name:{
             type:Sequelize.STRING,
@@ -19,7 +19,7 @@ module.exports = (sequelize,Sequelize)=>{
             type: Sequelize.STRING
         },
         cost:{
-            type: Sequelize.INTEGR,
+            type: Sequelize.INTEGER,
             allowNull:false
         }
     },{tableName:'Products'});

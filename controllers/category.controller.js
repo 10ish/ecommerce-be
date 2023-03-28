@@ -39,7 +39,7 @@ res.status(500).send({message: 'some Internal error'})
 */
 exports.findAll = (req,res)=>{
     let result;
-    const categoryName = req.params.query;
+    const categoryName = req.query.name;
     if(categoryName){
 result = Category.findAll({where:{name:categoryName}})
     }
