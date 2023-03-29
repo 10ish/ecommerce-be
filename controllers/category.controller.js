@@ -4,17 +4,21 @@
 
 const db = require('../models');
 const Category = db.category;
+
+
 //post request to insert a category
 exports.create = (req,res)=>{
     /*
     Validity of the user
     */
-if(!req.body.name){
+/*if(!req.body.name){
     //req.body validity check
     console.log('Invalid body: no name in the body request');
     res.status(400).send('Invaliid Request in body : no name');
     return;
 }
+*/
+//now our middleware handles this code
 //creaton of new category
 const category = {
     name : req.body.name,
@@ -60,7 +64,7 @@ result.then((result)=>{
 exports.findOne = (req,res)=>{
     const requestedId = req.params.id;
 Category.findAll({where:{id:requestedId}}).then((category)=>{
-    res.status(201).send(category)
+    res.status(200).send(category)
 }).catch((err)=>{
     res.status(500).send({message: 'Internal error unable to fetch record'})
 })

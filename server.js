@@ -12,6 +12,9 @@ const db = require('./models');
 const Category = db.category;
 const Product = db.product;
 //looks if there is an existing db by the same name. if it has any data deletes the data and then calls the init function to insert dummy data
+
+Category.hasMany(Product);
+//estabilishing a relationn between product and category resource => inv=built sequelize function that creates a foreign key in products table by the name of category id
 db.sequelize.sync({force:true}).then(()=>{
     console.log('tables dropped and created');
     init()
