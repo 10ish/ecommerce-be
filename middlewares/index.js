@@ -1,6 +1,8 @@
-const requestValidator = require('./requestValidator');
+const validateCategoryRequest = require('./categoryRequestValidator');
+const validateProductRequest = require('./productRequestValidator.js');
 
 
 module.exports = {
-    requestValidator
+    validateCategoryRequest:validateCategoryRequest,
+    validateProductRequest : validateProductRequest
 }
