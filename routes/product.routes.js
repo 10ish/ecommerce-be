@@ -14,6 +14,8 @@ app.post('/ecom/api/v1/products',[validateProductRequest.validateProductBody,pro
 app.put('/ecom/api/v1/products/:id',[validateProductRequest.validateProductBody,validateProductRequest.validateProductId,productController.update]);
 //to delete a category
 app.delete('/ecom/api/v1/products/:id',[validateProductRequest.validateProductId,productController.delete])
+
+//to get the products based on the category id
+app.get('/ecom/api/v1/categories/:categoryId/products',[productController.getProductsByCategory]) 
+
 }
-
-

@@ -13,8 +13,7 @@ const Category = db.category;
 const Product = db.product;
 //looks if there is an existing db by the same name. if it has any data deletes the data and then calls the init function to insert dummy data
 
-Category.hasMany(Product);
-//estabilishing a relationn between product and category resource => inv=built sequelize function that creates a foreign key in products table by the name of category id
+
 db.sequelize.sync({force:true}).then(()=>{
     console.log('tables dropped and created');
     init()
@@ -29,7 +28,7 @@ Category.bulkCreate(dummyCategories)
     console.log('Initialised failed due to : ' + err);
 })
 //creating dummy entries for product and categories when db is initialised
-const dummyProducts = [{name:'Mobile phone',description:'redmi note 8',cost:30000},{name:'Dido',description:'6 inch',cost:100000}];
+const dummyProducts = [{name:'Mobile phone',description:'redmi note 8',cost:30000,categoryId:1},{name:'Dido',description:'6 inch',cost:100000,categoryId:2}];
 Product.bulkCreate(dummyProducts)
 .then(()=>{
     console.log('succesfully initialized product')
@@ -45,6 +44,8 @@ Product.bulkCreate(dummyProducts)
 require('./routes/category.routes')(app);
 //importing product routes and calling by passing express app constant to it
 require('./routes/product.routes')(app);
+//importing alll the auth routes
+require('./routes/auth.routes')(app);
 
 //Server Listening
 app.listen(serverConfig.PORT,()=>{

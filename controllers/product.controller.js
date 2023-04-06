@@ -137,3 +137,16 @@ exports.delete = async (req, res) => {
     res.status(500).send({ message: "Interna; server errorr" });
   }
 };
+
+//to get the product based on the category id
+exports.getProductsByCategory = async (req,res)=>{
+const categoryId = parseInt(req.params.categoryId);
+
+try{
+  const product = await Product.findAll({where:{categoryId:categoryId}});
+  res.status(201).send(product)
+}
+catch(err){
+  res.status(500).send({message:'Some interbnal server error'})
+}
+}
