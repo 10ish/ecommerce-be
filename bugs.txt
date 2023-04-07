@@ -1,0 +1,23 @@
+the fet request is validating the request and next is not called, if called then it collides with pther queries
+
+{
+ "username": "Tanish",
+ "password" : "1234",
+ "email": "wjdbjde",
+ "roles": ["admin","user"]   
+}
+{
+ "username": "10ish",
+ "password" : "1234",
+ "email": "wjdbjdkjndkjde"
+ 
+}
+{ 
+    "name" : "hjdshjds",
+    "description": "jgashusb"
+}
+{
+    "username": "Tanish",
+    "password": "1234"
+}
+ "jwtToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgwODI2MTYzLCJleHAiOjE2ODA5MTI1NjN9.tZ5Z5YFQ7H-TxBqnENtdUocTCoGY0DK0KJU5X8zYzOs"

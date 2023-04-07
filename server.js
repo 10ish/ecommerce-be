@@ -49,8 +49,9 @@ function init() {
     });
   //creating role entries for the users in the role table
   const initialRoles = [
-    { id: 1, name: "admin" },
-    { id: 2, name: "user" },
+    
+    { id: 1, name: "user" },
+    { id: 2, name: "admin" }
   ];
   Role.bulkCreate(initialRoles);
 }
@@ -63,6 +64,8 @@ require("./routes/category.routes")(app);
 require("./routes/product.routes")(app);
 //importing alll the auth routes
 require("./routes/auth.routes")(app);
+//importing cart routes
+require('./routes/cart.routes')(app);
 
 //Server Listening
 app.listen(serverConfig.PORT, () => {
