@@ -21,3 +21,6 @@ the fet request is validating the request and next is not called, if called then
     "password": "1234"
 }
  "jwtToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgwODI2MTYzLCJleHAiOjE2ODA5MTI1NjN9.tZ5Z5YFQ7H-TxBqnENtdUocTCoGY0DK0KJU5X8zYzOs"
+
+ {"products": ["1","2",
+ "quantity":["3","4"]]}

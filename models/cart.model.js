@@ -1,5 +1,4 @@
 
-
 module.exports = (sequelize,Sequelize)=>{
 
 const Cart = sequelize.define('cart',{
@@ -8,8 +7,9 @@ const Cart = sequelize.define('cart',{
         autoIncrement: true,
         primaryKey:true
     },
-    cost :{
-        type: Sequelize.STRING
+    status :{
+        type:Sequelize.STRING,
+        defaultValue:'created'
     }
 })
 return Cart

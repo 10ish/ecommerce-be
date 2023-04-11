@@ -35,7 +35,9 @@ exports.create = async (req, res) => {
   try {
     let createdCategory = await Category.create(category);
     console.log("created a category with" + category.name);
-    res.status(201).send(createdCategory);
+    res.status(201);
+    res.send(createdCategory);
+
   } catch (err) {
     console.log(" unable to create due to" + err);
     res.status(500).send({ message: "some Internal error" });
@@ -151,3 +153,7 @@ exports.delete = async (req, res) => {
     res.status(500).send({ message: "Internal Server Error" });
   }
 };
+
+
+
+
