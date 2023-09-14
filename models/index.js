@@ -5,7 +5,7 @@
 //importing databse configuration 
 const Sequelize = require('sequelize');
 //checking the environment and setting the db config based on that 
-const env = process.env.NODE_ENV || 'developemnt';
+const env = process.env.NODE_ENV || 'developement';
 const dbConfig = require('../configs/db.config')[env];
 
 //establishing connection 

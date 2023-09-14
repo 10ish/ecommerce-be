@@ -1,0 +1,21 @@
+.home-title{
+    margin:5% 0;
+}
+
+.login-wrapper,.signup-wrapper{
+
+    margin: auto;
+    width:600px;
+    align-items: center;
+}
+.signup-wrapper{
+    display: none;
+}
+.input-group{
+    margin-bottom: 30px;
+}
+.login-wrapper .show-login-btn{
+
+    cursor:poniter;
+    width: auto;
+}

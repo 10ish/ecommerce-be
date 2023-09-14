@@ -22,6 +22,8 @@
     "@babel/cli": "^7.21.0",
     "@babel/core": "^7.21.3",
     "@babel/node": "^7.20.7",
-    "@babel/preset-env": "^7.20.2"
+    "@babel/preset-env": "^7.20.2",
+    "gh-pages": "^6.0.0",
+    "uni": "^0.0.6"
   }
 }
